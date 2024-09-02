@@ -41,13 +41,16 @@ for i, juz in enumerate(juz_list):
     else:
         # If it's the last Juz, calculate until the end of the Quran
         end_aya = calculate_aya_index(sura, suras[sura])
+
+    if index == 30:
+        end_aya = 6236
     
     # Append data
     output_data.append({
         'id': f'QJ{index:02}',
         'number': index,
-        'start_aya': f'QA{start_aya:03}',
-        'end_aya': f'QA{end_aya:03}'
+        'start_aya': f'QA{start_aya:02}',
+        'end_aya': f'QA{end_aya:02}'
     })
     
     # Update previous_end_aya for next Juz
