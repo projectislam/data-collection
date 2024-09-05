@@ -34,4 +34,4 @@ with open(csv_file, 'w', newline='', encoding='utf-8') as csvfile:
             # Increment the continuous id counter
             aya_counter += 1
 
-print(f"Data successfully written to {csv_file}")
+print(f"NEXT RUN `python add-sajda-in-aya.py`")
