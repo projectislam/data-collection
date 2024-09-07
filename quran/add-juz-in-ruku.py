@@ -36,7 +36,7 @@ for juz in juzs:
 
 # Write the updated Rukus data to a new CSV file
 with open('rukus.csv', mode='w', newline='') as updated_rukus_file:
-    fieldnames = ['id', 'number', 'number_in_sura', 'sura', 'start_aya', 'end_aya', 'juz', 'number_in_juz']
+    fieldnames = ['id', 'number', 'number_in_sura', 'sura', 'start_aya', 'end_aya', 'aya_completed', 'juz', 'number_in_juz']
     writer = csv.DictWriter(updated_rukus_file, fieldnames=fieldnames)
     writer.writeheader()
     writer.writerows(rukus)
