@@ -1,4 +1,4 @@
-id,number,number_in_sura,sura,start_aya,end_aya,aya_completed,juz,number_in_juz
+id,number,number_in_sura,sura,start_aya,end_aya,total_ayas,juz,number_in_juz
 QJ01,1,1,QS01,QA01,QA07,7,QJ01,1
 QJ02,2,1,QS02,QA08,QA14,7,QJ01,1
 QJ03,3,2,QS02,QA15,QA27,13,QJ01,2

@@ -40,15 +40,15 @@ for i, ruku in enumerate(ruku_list):
         # Calculate end_aya for the current ruku
         end_aya = calculate_aya_index(next_sura, next_aya - 1)
         
-        # Calculate aya_completed
+        # Calculate total_ayas
         if sura == next_sura:
-            aya_completed = next_aya - aya
+            total_ayas = next_aya - aya
         else:
-            aya_completed = suras[sura] - aya + 1
+            total_ayas = suras[sura] - aya + 1
     else:
         # If it's the last ruku, calculate until the end of the Quran
         end_aya = calculate_aya_index(sura, suras[sura])
-        aya_completed = suras[sura] - aya + 1
+        total_ayas = suras[sura] - aya + 1
 
     if index == 556:
         end_aya = 6236
@@ -70,7 +70,7 @@ for i, ruku in enumerate(ruku_list):
         'sura': f"QS{sura:02}",
         'start_aya': f'QA{start_aya:02}',
         'end_aya': f'QA{end_aya:02}',
-        'aya_completed': aya_completed
+        'total_ayas': total_ayas
     })
     
     # Update previous_end_aya for next ruku
@@ -78,7 +78,7 @@ for i, ruku in enumerate(ruku_list):
 
 # Write the output to a CSV file
 with open('rukus.csv', 'w', newline='', encoding='utf-8') as csvfile:
-    fieldnames = ['id', 'number', 'number_in_sura', 'sura', 'start_aya', 'end_aya', 'aya_completed']
+    fieldnames = ['id', 'number', 'number_in_sura', 'sura', 'start_aya', 'end_aya', 'total_ayas']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
     writer.writeheader()
